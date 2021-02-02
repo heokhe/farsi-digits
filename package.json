@@ -2,14 +2,12 @@
   "version": "1.0.0",
   "name": "farsi-digits",
   "source": "index.js",
-  "main": "./dist/index.js",
-  "exports": "./dist/index.modern.js",
-  "module": "./dist/index.module.js",
-  "unpkg": "./dist/index.umd.js",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
   "description": "Converts digits to Farsi digits, for example 1234 to ۱۲۳۴",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "microbundle"
+    "build": "microbundle -f modern,cjs"
   },
   "repository": {
     "type": "git",
