@@ -3,11 +3,14 @@ const char = x => x.charCodeAt(0);
 const OFFSET = char('۱') - char('1');
 
 /**
- * @param {number|string} number
- * @param {boolean} [ignorePeriods] If true, periods are not converted to slashes.
+ * @param {number} number
+ * @param {Object} [options]
+ * @param {boolean} [options.ignorePeriods] If true, periods are not converted to slashes. (default: false)
+ * @param {boolean} [options.convertZeroToWord] If true, returns صفر instead of ۰ (default: true)
  * @returns {string}
 */
-export default function convertToFarsiDigits(number, ignorePeriods = false) {
+export function toFarsiDigits(number, { ignorePeriods = false, convertZeroToWord = true } = {}) {
+  if (convertZeroToWord && number === 0) return 'صفر';
   return number.toString()
     .split('')
     .map(digit => {
