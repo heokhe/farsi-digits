@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "description": "Converts digits to Farsi digits, for example 1234 to ۱۲۳۴",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "microbundle -f modern,cjs"
