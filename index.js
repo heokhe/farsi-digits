@@ -10,8 +10,10 @@ const OFFSET = char('۱') - char('1');
  * @returns {string}
 */
 export function toFarsiDigits(number, { ignorePeriods = false, convertZeroToWord = true } = {}) {
-  if (convertZeroToWord && (number === 0 || number === 0n || number === '0')) return 'صفر';
-  return number.toString()
+  const string = number.toString();
+  // true if number is either 0 or '0' or 0n
+  if (convertZeroToWord && string === '0') return 'صفر';
+  return string
     .split('')
     .map(digit => {
       if (digit === '.') return ignorePeriods ? '.' : '٫';
