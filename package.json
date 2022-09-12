@@ -1,5 +1,5 @@
 {
-  "version": "4.0.0",
+  "version": "4.0.1",
   "name": "farsi-digits",
   "description": "Converts digits to Farsi digits, for example 1234 to ۱۲۳۴",
   "type": "module",
