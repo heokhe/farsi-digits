@@ -1,4 +1,4 @@
-const farsiDigits = [...'۰۱۲۳۴۵۶۷۸۹']
+const farsiDigits = '۰۱۲۳۴۵۶۷۸۹'.split('')
 
 /**
  * @param {number|bigint} number
